@@ -21,7 +21,7 @@ class mapmanagement extends Command{
     if(!$sender instanceof Player)return $sender->sendMessage("Versuche es in-game");
     if($sender->isOp()){
       if(empty($args[0])){
-        $sender->sendMessage("§cBenutze: /map <create>, <join {map name}> <load>");
+        $sender->sendMessage("§cBenutze: /map <create>, <tp/teleport {map name}> <load>");
       }elseif($args[0] == "create"){
         $this->mapCreateGui($sender);
       }elseif($args[0] == "tp" or $args[0] == "teleport"){
