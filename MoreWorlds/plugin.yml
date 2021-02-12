@@ -1,0 +1,6 @@
+---
+name: MoreWorlds
+version: 1.0
+main: EnteFan\MoreWorlds\Main
+api: 3.15.2
+...
