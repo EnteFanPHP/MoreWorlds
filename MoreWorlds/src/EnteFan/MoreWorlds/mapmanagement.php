@@ -6,10 +6,12 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\Player;
 use pocketmine\level\generator\GeneratorManager;
+
 use EnteFan\MoreWorlds\Main;
 
 class mapmanagement extends Command{
   
+  /*@var Main*/
   private $main;
   
   public function __construct(Main $main){
@@ -103,9 +105,9 @@ class mapmanagement extends Command{
       return true;
     });
     $form->setTitle("Create Map");
-    $form->addInput("Gib einen Namen ein");// 0
+    $form->addInput("Gib einen Namen ein");
     $maps = ["Normal", "Flach", "Leer"];
-    $form->addDropDown("Wahle einen Stil", $maps);//1
+    $form->addDropDown("Wahle einen Stil", $maps);
     $form->addToggle("Welt Teleport", false);
     $form->sendToPlayer($player);
     return $form;
